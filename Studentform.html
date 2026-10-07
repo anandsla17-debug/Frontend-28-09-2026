@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student form</title>
+</head>
+<body>
+    <center>
+        <form  action="Success.html" method="get" autocomplete="on" target="_blank">
+    <table >
+        <tr>
+            <th colspan="2 span">
+                <h2>Student Admission form</h2>
+            </th>
+        </tr>
+        <tr>
+            <th>
+               <label for="name">Name</label> 
+            </th>
+            <td>
+                <input id="name" type="text" placeholder="Enter your name" >
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+           
+           <label for="age">Age</label>     
+            </th>
+            <td>
+                <input id="age" type="number" min="17"  placeholder="Enter your age" required>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label>Email</label>
+            </th>
+            <td>
+                <input type="email" placeholder="Enetr your Email">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="gender">Gender</label>
+            </th>
+            <td>
+                <select id="gender" style="width: 91%;">
+                    <option value="-">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="dob">DOB</label>
+            </th>
+            <td>
+                <input id="dob" style="width: 89%;" type="date" value="2026-10-05"  >
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label>Phone No</label>
+            </th>
+            <td>
+                <input type="tel" maxlength="10"  placeholder="Enter your no" >
+            </td>
+        </tr>
+       <tr>
+        <th>
+            <label for="course">Course</label>
+        </th>
+        <td>
+            <select id="course" style="width: 96%;">
+                <optgroup label="Engineering">
+              <option value="cse">Cse</option>
+              <option value="ece">ECE</option>
+              <option value="eee">EEE</option>
+              <option value="ai&ds">AI&DS</option>
+              <option value="it">IT</option>
+              <option value="mech">Mech</option>
+              <option value="civil">Civil</option>
+                </optgroup>
+                <optgroup label="arts">
+<option value="bsc(cs)">BSc(computer Science)</option>
+<option value="msc(cs)">Msc(computer Science)</option>
+                </optgroup>
+            </select>
+        </td>
+       </tr>
+       <tr>
+        <th>
+            <label>Student photo</label>
+            
+         </th>
+         <td>
+            <input type="file"  accept=".jpg,.png" />
+         </td>
+       </tr>
+       <tr>
+       <th>
+<label>Student Mode of eduction</label>
+       </th>
+       <td>
+        <input type="checkbox" name="modeofed" value="bus" > bus
+        <input type="checkbox" name="modeofed" value="hostel" checked> hostel
+       </td>
+       </tr>
+
+       <tr>
+        <th>
+            <label>color</label>
+        </th>
+        <td>
+            <input type="color" value="green"/>
+        </td>
+       </tr>
+       <tr>
+        <th>
+            <label>Clg rate</label> 
+        </th>
+        <td>
+            <input type="range" min="0" max="5"  value="0" oninput="this.nextElementSibling.value=this.value"/> <output>0</output>
+        </td>
+       </tr>
+       <tr>
+        <th>
+            <label>Previous School url:</label>
+        </th>
+        <td>
+            <input type="url"  placeholder="Enter your url"/>
+        </td>
+       </tr>
+       <tr>
+        <th>
+            <label>Student feedback</label> 
+
+        </th>
+        <td>
+            <textarea cols="28" rows="5" maxlength="20" minlength="5" placeholder="enter your feedback "></textarea>
+        </td>
+       </tr>
+       <tr>
+        <td>
+            <center>
+        <button   type="submit"  title="this button is used to submit data"  accesskey="s">Submit</button>
+        </center>
+        </td>
+
+        <td>
+            <center>
+            <button type="reset">Reset</button>
+            </center>
+        </td>
+       </tr>
+       
+    </table>
+    </form>
+    </center>
+</body>
+</html>

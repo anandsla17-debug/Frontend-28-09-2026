@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector css</title>
+    <style>
+        /* group selector */
+        p,h1{
+            font-size: 20px;
+            background-color: bisque;
+        }
+        .student:hover,p:hover,h1:hover{
+            border: 2px solid palevioletred;
+            text-align:center ;
+        }
+        *{
+            margin: 0;
+            background-color: blanchedalmond;
+        }
+        /* child selector  */
+.main-parent>h3{
+ background-color: white;
+
+}
+/* descendant selector */
+.main-parent h3{
+    border-bottom:2px solid lightblue ;
+}
+.main-parent>ol, .ol-d>li{
+    background-color: chocolate;
+}
+
+/* adjacent sibling selector  */
+div+span{
+    box-shadow: 1px 1px 10px 1px black;
+    margin-left: 5px;
+}
+
+/* general sibiling selector */
+
+div~span{
+    border: 2px dotted pink;
+
+}
+input[type="text"]{
+    border-radius: 5px;
+    border:2px solid black;
+    margin-bottom: 3px;
+    color: green;
+}
+h2::first-letter{
+    color: blue;
+}
+h2::before{
+    content: "👍";
+}
+h2:hover:after{
+    content: "🔍🔍🔍";
+}
+li:first-child{
+    background-color: aqua;
+}
+li:last-child{
+    font-size: 5px;
+}
+li:nth-child(even){
+    color: blue;
+}
+li:nth-child(odd){
+    color: white;
+}
+li::marker{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input::placeholder{
+    color: white
+}
+
+    </style>
+</head>
+<body>
+    
+    <h2 class="student">student portal</h2>
+    <p >box</p>
+    <h1>box1</h1>
+    <div class="main-parent">
+        <h3>subject name</h3>
+        <ol class="ol-d">
+            <li>maths</li>
+            <li>scienece</li>
+            <li>social</li>
+            <li>English</li>
+            <li>tamil</li>
+        </ol>
+        <div class="sub-parent">
+            <h3>subejct code</h3>
+            <ol>
+                <li>c345</li>
+                <li>sc734</li>
+                <li>so234</li>
+            </ol>
+
+        </div>
+    </div>
+    <span>next element</span>
+     <u>important</u>
+    <span>data</span>
+
+
+    <hr style="margin-top: 10px; border: 1px solid green;">
+    
+    <form action="" >
+        <h2>Student login form</h2>
+        <input type="text" placeholder="Enter your name">
+        <br>
+        <input type="password" placeholder="Enter your password">
+        <br>
+         <button>submit</button>
+    </form>
+
+    
+</body>
+</html>

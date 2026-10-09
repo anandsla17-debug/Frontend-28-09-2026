@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css unit</title>
+    <style>
+    .px{
+     background-color: aquamarine; 
+     height: 100px;
+     width: 100px;
+    }
+    .inch{
+height: 1in;
+background-color: brown;
+width: 1in;
+    }
+    .mm{
+      height:10mm ;
+      background-color: blue;
+      width: 10mm;  
+    }
+    .cm{
+        height: 1cm;
+        background-color: gold;
+        width: 1cm;
+    }
+    .pt{
+  height: 15pt;
+  background-color: cadetblue;
+  width: 10pt;
+    }
+    .percentage{
+        background-color: blueviolet;
+        height: 10%;
+        width: 10%;
+    }
+    .rem{
+height: 6rem;
+background-color: burlywood;
+width: 6rem;
+    }
+
+    div{
+        font-size: 1px;
+        
+    }
+.em{
+    font-size: 40em;
+    
+    background-color: blanchedalmond;
+}
+
+    </style>
+</head>
+<body>
+    <p>Absolute Units  independent: </p>
+    <p class="px">px</p>
+    <p class="inch">inch 1=>96px</p>
+    <p class="mm">mm</p>
+    <p class="cm">cm</p>
+    <p class="pt">pt</p>
+
+
+    <p>relative units: dependent</p>
+    <p class="percentage">%=>screen</p>
+    <p class="rem">rem=> root element</p>
+    <div>
+        <p class="em">em</p>
+    </div>
+</body>
+</html>

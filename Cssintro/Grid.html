@@ -19,7 +19,7 @@
             height: 600px;
             width: 100%;
             grid-template-columns: 100px 100px 100px;
-            grid-template-rows: 100px 100px 100px 100px;
+            grid-template-rows:repeat(2,50px) repeat(3,100px);
             row-gap: 10px;
             column-gap: 10px;
             justify-content: center;
@@ -30,15 +30,88 @@
             /* inside the border=> left to right */
             /* align-items: center; */
             /* top to bottom=> inside the border */
+            /* grid-auto-flow: column; */
+            /* grid-template-columns: repeat(auto-fill ,minmax(100px,1fr)) ; */
+            /* fit=> it take full space; */
+            /* fill=>it take needed space */
+
         }
         *{
             margin: 0px;
         }
         .box1{
-            grid-column: 2 span;
+            /* grid-column: 2 span; */
         }
         .box8{
-            grid-row: 2 span;
+            /* grid-row: 2 span; */
+        }
+        .box2{
+
+        }
+
+         .box3{
+            
+        }
+         .box4{
+            
+        }
+         .box5{
+            
+        }
+         .box6{
+            
+        }
+         .box7{
+            
+        }
+        .box8{
+
+        }
+        .box9{
+            
+        }
+         .box10{
+            
+        }
+
+        .grid-areas{
+            display: grid;
+            grid-template-areas: "a1 a5 a3"
+                                "a4 a2 a6"
+                                "a7 a8 a9"
+                                "a10 a10 a10";
+        }
+        .box11{
+grid-area: a1;
+        }
+        
+          .box20{
+            grid-area: a2;
+        }
+          .box30{
+            grid-area:a3;
+        }
+          .box40{
+            grid-area: a4;
+        }
+          .box50{
+            grid-area: a5;
+        }
+          .box60{
+            grid-area: a6;
+        }
+        .box70{
+grid-area: a7;
+        }
+        .box80{
+            grid-area: a8;
+
+        }
+        .box90{
+grid-area: a9;
+        }
+        .box100{
+            grid-area: a10;
         }
     </style>
 </head>
@@ -54,6 +127,19 @@
 <p class="box8">8</p>
 <p class="box9">9</p>
 <p class="box10">10</p>
+    </div>
+
+         <div class="grid-areas">
+<p class="box11">1</p>
+<p class="box20">2</p>
+<p class="box30">3</p>
+<p class="box40">4</p>
+<p class="box50">5</p>
+<p class="box60">6</p>
+<p class="box70">7</p>
+<p class="box80">8</p>
+<p class="box90">9</p>
+<p class="box100">10</p>
     </div>
 </body>
 </html>

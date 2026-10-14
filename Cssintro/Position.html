@@ -7,12 +7,13 @@
     <style>
         .heading{
 position: relative;
-top:60px;
-left:90px
+top:100px;
+left:90px;
         }
         .student-img{
            position: relative;
-           bottom: 70px;
+           bottom: 10px;
+
         }
 
         .page{
@@ -45,15 +46,122 @@ background-color: rgb(172, 111, 32);
              z-index: 0;
             bottom: 250px;
         }
-        
+        .parent{
+height: 500px;
+width: 100%;
+border: 2px solid black;
+position: relative;
+bottom: 600px;
+overflow-y:hidden ;
+        }
+        .child{
+            position: absolute;
+            left: 233px;
+            bottom: 200px;
+          background-color: silver;
+          height: 30px;
+          width: 120px;
+          text-align: center;
+          align-content: center;
+          border-radius: 5px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bolder;
+          
+        }
+.laptop{
+    position:absolute;
+    
+}
+.apple{
+    position: absolute;
+    left: 250px;
+    top:170px;
+}
+.html{
+background-color: aqua;
+height: 50px;
+text-align: center;
+align-content: center;
+width: 100px;
+border-radius: 50px;
+position: absolute;
+left: 120px;
+top:300px;
+
+}
+.css{
+background-color: blueviolet;
+height: 50px;
+text-align: center;
+align-content: center;
+width: 100px;
+border-radius: 50px;
+position: absolute;
+left: 245px;
+
+top:300px;
+
+}
+.js{
+background-color: cadetblue;
+height: 50px;
+text-align: center;
+align-content: center;
+width: 100px;
+border-radius: 50px;
+position: absolute;
+left: 380px;
+top:300px;
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+   align-items: center;
+     width: 100%;
+    
+      background-color: black ;
+      height: 40px;
+      position: fixed;
+      z-index: 4;
+      overflow-y: hidden;
+}
+.bg{
+   
+    color: white;
+    font-size: 30px;
+    margin-top: 28px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(54, 84, 84);
+  
+    width: 80px;
+    border-radius: 5px;
+}
+*{
+    margin-top:0px ;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow-x: hidden;
+}
+
+
+
     </style>
 </head>
 <body>
     
+    <div class="flex">
+        <p class="bg">html</p>
+        <p class="bg">css</p>
+        <p class="bg">js</p>
+    </div>
+
     <div>
     <p class="heading">welcome Students</p>
-    <img class="student-img" src="student.png" width="100px" height="150px">
+ <img class="student-img" src="student.png" width="100px" height="150px">
     </div>
+  
+      
     <div>
         <p class="board"></p>
         <h2 class="page">Student page</h2>
@@ -62,5 +170,16 @@ background-color: rgb(172, 111, 32);
             <source src="video.mp4" type="video/mp4">
         </video>
     </div>
+    <div class="parent">
+       
+<p class="child">Mac Laptop</p>
+<p class="html">HTML</p>
+<p class="css">CSS</p>
+<p class="js">JS</p>
+<img class="laptop" src="laptop.png" width="600px" >
+<img class="apple" src="apple.png" width="80px">
+    </div>
+    
+   
 </body>
 </html>

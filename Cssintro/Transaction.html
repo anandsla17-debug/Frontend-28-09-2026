@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transaction effect</title>
+    <style>
+        .box{
+            background-color: aquamarine;
+            width: 100%;
+            height:100px ;
+            text-align: center;
+            align-content: center;
+            /* transition-delay: 2s;
+            transition-duration: 10s;
+            transition-timing-function: cubic-bezier(1, 0.32, 0.58, 1);
+            transition-property: width,box-shadow; */
+            transition: width 10s ease 2s,box-shadow 10s ease 2s;
+        }
+        .box:hover{
+            width: 100px;
+            background-color: blue;
+            text-align: center;
+            box-shadow: 3px 3px 10px 1px green;
+        }
+        .animations{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: boxs;
+            animation-duration: 10s;
+            animation-delay: 5s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                  animation-fill-mode: backwards;
+        }
+
+        @keyframes boxs{
+          10%{
+            background-color: brown;
+
+          }
+          20%{
+            background-color: black;
+            margin-left: 300px;
+          }
+          50%{
+background-color: cadetblue;
+margin-top: 400px;
+          }
+          90%{
+background-color: cornflowerblue;
+margin-left: 100px;
+          }
+          100%{
+            margin-left: 50%;
+            background-color: chocolate;
+          }
+        }
+    </style>
+</head>
+<body>
+    <p>transaction effect</p>
+    <p class="box">box</p>
+    <p>animation</p>
+    <p class="animations">box</p>
+</body>
+</html>

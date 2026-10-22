@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of function</title>
+    <script>
+        function add(){
+            let a=10,b=10;
+            console.log(a+b);
+            
+        }
+        add();
+
+        const score=function(){
+            let mark =500;
+             let result=250/500*100;
+             console.log("result",result+"%");
+        }
+        score();
+   const ar=()=>console.log(20+10);
+   ar();
+
+   const sub=(a,b)=>a-b;
+   console.log(sub(10,90));
+    console.log("sub:"+sub(10,10));
+
+    function multi(x=10,y=90){
+        return x*y;
+    }
+    console.log("multi="+multi(60,2));
+    //recursive loop
+function loop(n=1){
+if(n==11){
+    return;// stop
+
+}
+    console.log("data"+n);
+    loop(n+1);
+
+}
+loop(1);
+
+function check(){
+console.log("before");
+return; // function will be stop
+console.log("after");
+}
+
+check();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

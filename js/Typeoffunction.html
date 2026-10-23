@@ -25,6 +25,7 @@
    console.log(sub(10,90));
     console.log("sub:"+sub(10,10));
 
+//function return
     function multi(x=10,y=90){
         return x*y;
     }
@@ -48,6 +49,102 @@ console.log("after");
 }
 
 check();
+
+//next function
+
+function locations(){
+    console.log("all location");
+    function chennai(){
+        console.log("location chennai");
+        function navalur(){
+            console.log("location navalur");
+        }
+        navalur();
+    }
+    chennai();
+}
+
+locations();
+
+// next function return
+function calculator(a,b){
+
+    console.log("calculator:");
+    function add(a,b){
+        return a+b;
+    }
+    return add(a,b);
+}
+console.log(calculator(10,10));
+
+// callback function
+function callback(x,y,callback){
+    callback(x,y);
+
+}
+
+function logic(x,y){
+    console.log("add"+(x+y));
+    console.log("multi"+(x*y));
+    console.log("div"+x/y);
+}
+callback(20,2,logic);
+
+// callback function return
+function callreturn(s1,s2,callreturn){
+   return callreturn(s1,s2);
+
+}
+
+function returnlogic(a1,a2){
+    return a1+a2;
+
+}
+console.log(callreturn("good","day",returnlogic));
+
+console.log(callreturn(20,10,(s1,s2)=>s1*s2));
+console.log(callreturn(30,2,function(s1,s2){
+return s1/s2;
+}));
+
+//object 
+let object={
+    "a":10,
+    "logic":function(){
+        console.log("logic in object")
+    },
+    "b":"pen",
+    "get":function(){
+console.log("get...")
+    }
+}
+console.log(object.a,object.b);
+object.logic();
+object.get();
+
+(
+    function call(){
+        console.log("self invoke");
+    }
+)();
+
+
+//Anonymous Function
+// setTimeout(function(){
+//     console.log("started")
+// },1000);
+// setInterval(function(){
+//     console.log("repeat");
+// },1000);
+
+// rest operator
+
+function studentnames(...name){
+console.log(name);
+}
+studentnames("max","arun","kumar");
+
+
     </script>
 </head>
 <body>

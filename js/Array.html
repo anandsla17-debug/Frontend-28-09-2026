@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array js</title>
+    <script>
+        //collection =>no of data collection(array,set,map=>of)
+        // inseration order flow
+        // it allow duplicate
+        //it will be have index 
+// loop all term => of()
+        //
+          let arr1=new Array(["a","b","c",1]);
+        console.log(arr1);
+        let arr=[10,20,30,40,10];
+        console.log(arr);
+        console.log(arr[1]);
+        for(let data of arr){
+            console.log("arr"+data);
+        }
+
+        // stack => push=>store ,pop=>remove (lifo)
+        let stack=[];
+        stack.push("pen");
+        stack.push("pencil");
+        stack.push("scale");
+        stack.pop();
+        stack.pop();
+        console.log(stack);
+        //queue=>shift=>remove,unshift=>add(fifo)
+        let queue=[];
+        queue.unshift(1);
+        queue.unshift(2);
+        queue.unshift(3);
+        queue.unshift(4);
+        queue.shift();
+        console.log(queue)
+   // array=> splice
+
+   let middle=[5,10,15];
+   middle.splice(1,0,20)//start,length,add value
+   middle.splice(2,0,70,80,30);
+   middle.splice(5,1);
+   console.log(middle);
+
+   //set =>index do not have
+   //=> duplicate not allow
+   let subject=new Set(["cs","math","chemistry"]);
+   subject.add("cse")
+   subject.delete("cse")
+   console.log(subject.size)
+   subject.clear();
+   console.log(subject)
+
+   for(let sets of subject){
+    console.log(sets);
+   }
+
+   //map collection =>key,value
+   let product=new Map([["p1","pen"],["p2","pencile"]]);
+   product.set("p3","scale");
+   product.set("p1","easer")
+   console.log(product.get("p1"));
+
+   for(let [productid,productname] of product){
+    console.log("key",productid,"value",productname);
+   }
+
+// array advance method =>map,filter,find,reducer,includes
+
+//array map =>loop (change data);
+let salary=[20000,40000,25000,30000];
+let result=salary.map(increment=>increment+1000);
+console.log(result);
+let doubleincrement=salary.map(percentage=>percentage*2);
+console.log(doubleincrement)
+let  findsmap=salary.map(find=>find==20000);
+console.log(findsmap);
+//array filter =>it return array
+let number=[10,20,40,40,50,60,70];
+let splits=number.filter(no=>no<50);
+console.log(splits);
+      
+// not array
+let finds=number.find(d=>d==50);
+console.log( typeof finds)
+//includes
+console.log(number.includes(20))
+console.log(number.concat(salary));
+//reducer =>total 
+let counts=[3,4,5];
+let total=counts.reduce((present,current)=>present+current,0);//3+0=>3=>c=>4+3=>5+7=>12
+console.log("total"+total)
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

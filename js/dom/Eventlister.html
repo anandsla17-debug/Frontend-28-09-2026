@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventLister</title>
+    <script >
+        function change(){
+            let body=document.querySelector("body");
+            let data= document.querySelector("#change").value;
+            console.log(data)
+            if(data=="red"){
+                body.style.backgroundColor="red";
+            }else if(data=="blue"){
+                body.style.backgroundColor="blue";
+            }else if(data=="black")
+            {
+                body.style.backgroundColor="black";
+            }
+        }
+function lengths(){
+let input =document.getElementsByTagName("input")[0];
+console.log(input.value.length);
+input.nextElementSibling.textContent=`input Length:${input.value.length}`;
+}
+    </script>
+</head>
+<body>
+    <select id="change" onchange="change()">
+        <option value="-">color</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="black">black</option>
+    </select>
+    <input oninput="lengths()" type="text" placeholder="Search">
+    <p></p>
+    <p></p>
+    <script>
+
+let input=document.getElementsByTagName("input")[0];
+input.addEventListener('input',function(){
+    let tags=document.getElementsByTagName("p")[1];
+    tags.textContent=`result:${input.value}`;
+})
+    </script>
+</body>
+</html>

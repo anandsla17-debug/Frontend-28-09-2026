@@ -26,6 +26,8 @@ function collectdata(event){
     let result=document.getElementById("result");
     localStorage.setItem("id",studentid);
     localStorage.setItem("password",studentpassword);
+    sessionStorage.setItem("name",studentname);
+    sessionStorage.setItem("clg",studentclg);
     result.innerHTML+=`<p>Student id:${studentid}</p>
                <p>Student name:${studentname}</p>
                <p>Student password:${studentpassword}</p>

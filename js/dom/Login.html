@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script>
+       function login(event){
+        event.preventDefault();
+        let studentid=document.querySelectorAll(".form-control")[0].value;
+        
+        let studentpassword=document.querySelectorAll(".form-control")[1].value;
+        console.log(localStorage.getItem("password"), localStorage.getItem("id"));
+        if(studentid==localStorage.getItem("id") && studentpassword==localStorage.getItem("password")){
+           console.log("login successfull");
+           alert("login successfull");
+        }else{
+            console.log("login failed");
+            alert("login failed");
+        }
+       }
+    </script>
+</head>
+<body>
+    <form onsubmit="login(event)" class="container border border-primary rounded p-2" style="width: 300px;" autocomplete="off">
+        <p class="text-center h4">Student Login</p>
+        <input  class="form-control mt-2" type="number" placeholder="Enter your Student id" required>
+
+        <input class="form-control mt-2" type="password" placeholder="Enter your password" required>
+
+        <button class="btn btn-primary w-100 mt-2" type="submit">Login</button> 
+        <p class="text-center">Do not have an Account?<a href="Dom.html" class="btn btn-warning mt-2">Sign up</a></p>
+    </form>
+    
+</body>
+</html>

@@ -24,11 +24,15 @@ function collectdata(event){
                 let studentclg=document.getElementsByClassName("form-control")[3].value;
     console.log(studentid,studentname,studentpassword,studentclg);
     let result=document.getElementById("result");
-    
+    localStorage.setItem("id",studentid);
+    localStorage.setItem("password",studentpassword);
     result.innerHTML+=`<p>Student id:${studentid}</p>
                <p>Student name:${studentname}</p>
                <p>Student password:${studentpassword}</p>
                <p>Studen clg:${studentclg}</p>
                <hr>`;
+               setTimeout(()=>{
+               window.location.href="Login.html";
+               },2000)
 
 }

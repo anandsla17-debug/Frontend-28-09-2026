@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events2</title>
+</head>
+<body>
+    <button >Click</button>
+    <div>
+        <p>team1</p>
+        <p>team2</p>
+        <p>team3</p>
+    </div>
+    <script>
+        let btn=document.getElementsByTagName("button")[0];
+        btn.addEventListener("click",function(){
+            let divs=document.getElementsByTagName("div")[0];
+            divs.firstElementChild.style.color="blue";
+        
+            divs.lastElementChild.style.color="red";
+        })
+
+    </script>
+    
+</body>
+</html>

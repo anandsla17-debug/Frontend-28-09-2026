@@ -24,17 +24,27 @@ console.log(input.value.length);
 input.nextElementSibling.textContent=`input Length:${input.value.length}`;
 }
     </script>
+
+    <script src="Eventlister.js" defer></script>
 </head>
-<body>
+<body id="result">
     <select id="change" onchange="change()">
         <option value="-">color</option>
         <option value="red">red</option>
         <option value="blue">blue</option>
         <option value="black">black</option>
     </select>
+    <span>check</span>
+    <br>
     <input oninput="lengths()" type="text" placeholder="Search">
+    <br>
+    <span></span>
+    
+    <input type="text"  placeholder="Enter your data">
     <p></p>
     <p></p>
+
+    
     <script>
 
 let input=document.getElementsByTagName("input")[0];
@@ -42,6 +52,7 @@ input.addEventListener('input',function(){
     let tags=document.getElementsByTagName("p")[1];
     tags.textContent=`result:${input.value}`;
 })
+
     </script>
 </body>
 </html>

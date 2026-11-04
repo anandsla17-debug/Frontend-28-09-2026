@@ -22,8 +22,8 @@ for(let datas  of data){
 }
 
 })
-.catch(function(response){
-    console.log("error"+response)
+.catch(function(error){
+    console.log("error"+error.message)
 
 })
 

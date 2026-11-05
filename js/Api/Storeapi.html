@@ -14,26 +14,30 @@
         <input class="form-control mt-2" type="text" placeholder="Enter your name">
         <input  class="form-control mt-2"  type="number" placeholder="Enter your age">
         <input class="form-control mt-2"  type="clg" placeholder="Enter  your clg">
+        <input class="form-control mt-2" type="number" placeholder="Enter your id">
         <button type="submit" class="w-100 mt-2 btn btn-success">submit</button>
-
+<button onclick="update(event)" class="w-100 mt-2 btn btn-warning">Update</button>
+<button onclick="deletes(event)" class="w-100 mt-2 btn btn-danger">Delete</button>
 
     </form>
 
     <table class="table container border border-primary table-bordered mt-2">
         <thead>
             <tr>
+                <th>id</th>
                 <th>name</th>
                 <th>age</th>
                 <th>clg</th>
+
             </tr>
         </thead>
         <tbody>
         <tr>
-            <td colspan="3" id="store" class="text-center">do not store data</td>
+            <td colspan="4" id="store" class="text-center">do not store data</td>
         </tr>
         </tbody>
         <tbody>
-            
+
         </tbody>
     </table>
     

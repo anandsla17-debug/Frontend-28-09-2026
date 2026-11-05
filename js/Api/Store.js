@@ -19,9 +19,18 @@ try {
         
     }
     );
-
+console.log(response)
 const data=await response.json();
     console.log(data);
+    let body1=document.getElementsByTagName("tbody")[0];
+   body1.innerHTML="";
+   let body2= document.getElementsByTagName("tbody")[1];
+    let row=`<tr>
+    <td>${data.name}</td>
+    <td>${data.age}</td>
+    <td>${data.clg}</td>
+    </tr>`;
+    body2.innerHTML+=row;
 } catch (error) {
 
     console.log(error.message);
